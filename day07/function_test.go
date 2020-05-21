@@ -25,6 +25,11 @@ func TestBasicFn(t *testing.T) {
 	t.Log(tsSF(10))
 }
 
+//func TestNimoFn(t *testing.T)  {
+//	t.Log("hello")
+//
+//}
+
 func returnMultiValues() (int, int) {
 	return rand.Intn(10), rand.Intn(20)
 }
