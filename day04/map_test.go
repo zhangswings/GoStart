@@ -15,3 +15,23 @@ func TestMapBasic(t *testing.T) {
 	t.Log(m3)
 
 }
+
+func TestAccessExisting(t *testing.T) {
+	m1 := map[int]int{}
+	t.Log(m1[1])
+	m1[2] = 0
+	t.Log(m1[2])
+
+	if v, ok := m1[3]; ok {
+		t.Logf("Key 3's value is %d", v)
+	} else {
+		t.Log("Key 3's value is not existing")
+	}
+}
+
+func TestTravelMap(t *testing.T) {
+	m1 := map[string]int{"one": 1, "two": 2}
+	for k, v := range m1 {
+		t.Log(k, v)
+	}
+}
