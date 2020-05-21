@@ -1,4 +1,4 @@
-package array_test
+package day02
 
 import "testing"
 import "fmt"
