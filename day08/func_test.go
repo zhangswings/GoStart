@@ -7,9 +7,9 @@ import "testing"
 //}
 
 func TestFuncBasic(t *testing.T) {
-	//sumNum := sum(1, 2, 3, 4, 5)
-	t.Log("sumNum")
-	//t.Log(Sum(1, 2, 3, 4, 5))
+	sumNum := Sum(1, 2, 3, 4, 5)
+	t.Log(sumNum)
+	t.Log(Sum(1, 2, 3, 4, 5))
 }
 
 /**
