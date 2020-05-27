@@ -2,6 +2,7 @@ package day10
 
 import (
 	"errors"
+	"fmt"
 	"testing"
 )
 
@@ -39,4 +40,22 @@ func do(s string) (func(int, int) int, error) {
 		err := errors.New("无法识别的操作符")
 		return nil, err
 	}
+}
+
+/**
+func(参数)(返回值){
+    函数体
+}
+*/
+func TestCloseFunc(t *testing.T) {
+	//将匿名函数保存到变量
+	add2 := func(x, y int) {
+		fmt.Println(x + y)
+	}
+	add2(12, 20)
+
+	//子执行函数：匿名函数定义加完（）直接执行
+	func(x, y int) {
+		fmt.Println(x + y)
+	}(12, 13)
 }
